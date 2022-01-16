@@ -13,7 +13,7 @@ variable "subnet_ids" {
 
 variable "cidr_whitelist" {
   type    = list(string)
-  default = []
+  default = null
 }
 
 variable "sftp_ssm_param_prefix" {
