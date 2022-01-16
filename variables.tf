@@ -1,6 +1,6 @@
 variable "cluster_name" {
   type    = string
-  default = "default"
+  default = "sftp"
 }
 
 variable "vpc_id" {
@@ -17,11 +17,13 @@ variable "cidr_whitelist" {
 }
 
 variable "sftp_ssm_param_prefix" {
-  type = string
+  type    = string
+  default = "/sftp"
 }
 
-variable "ami_id" {
-  type = string
+variable "fsx_ssm_param_prefix" {
+  type    = string
+  default = "/fsx"
 }
 
 variable "sftp_users" {
@@ -29,11 +31,11 @@ variable "sftp_users" {
 }
 
 variable "sftp_main_container_image" {
-  type        = string
-  default     = "atmoz/sftp:latest"
+  type    = string
+  default = "atmoz/sftp:latest"
 }
 
 variable "sftp_config_container_image" {
-  type        = string
-  default     = "bash:latest"
+  type    = string
+  default = "bash:latest"
 }
